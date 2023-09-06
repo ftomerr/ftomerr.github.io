@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Droft Web - Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+   
+    <!-- navbar -->
+    <header class="header bg-blur">
+        <a href="index.html" class="Logo"
+          ><img src="img/logo.png" class="Logo" alt=""
+        /></a>
+  
+        <nav class="navbar">
+          <a href="index.html" style="--i: 1">Home</a>
+          <a href="about.html" style="--i: 2">About</a>
+          <a href="projects.html" style="--i: 3" class="active">Projects</a>
+          <a href="contact.html" style="--i: 4">Contact</a>
+
+        </nav>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+
+      </header>
+
+
+      <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="border-bottom"></div>
+
+        <div class="portfolio-container">
+
+            <div class="portfolio-box">
+              <img src="img/proje.jpg" alt="">
+              <div class="portfolio-layer">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, blanditiis.</p>
+                <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+
+
+                <div class="portfolio-box">
+                  <img src="img/haber-sitesi.png" alt="">
+                  <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, blanditiis.</p>
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+              </div>
+          
+              <div class="portfolio-box">
+                <img src="img/e-ticaret.png" alt="">
+                <div class="portfolio-layer">
+                  <h4>Web Design</h4>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, blanditiis.</p>
+                  <a href="#"><i class="bx bx-link-external"></i></a>
+              </div>
+            </div>
+
+              <div class="portfolio-box">
+                <img src="img/blog.png" alt="">
+                <div class="portfolio-layer">
+                  <h4>Web Design</h4>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, blanditiis.</p>
+                  <a href="#"><i class="bx bx-link-external"></i></a>
+              </div>
+            </div>
+
+              <div class="portfolio-box">
+                <img src="img/fproje.png" alt="">
+                <div class="portfolio-layer">
+                  <h4>Web Design</h4>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, blanditiis.</p>
+                  <a href="#"><i class="bx bx-link-external"></i></a>
+              </div>
+            </div>
+
+            <div class="portfolio-box">
+              <img src="img/freelancer.png" alt="">
+              <div class="portfolio-layer">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, blanditiis.</p>
+                <a href="#"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+    
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    <footer id="footer-main">
+        <div class="footer-content container">
+          <p>Copyright &copy; 2023 by Droft | All Rights Deserved.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="../node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <script>
+        // toggle icon na
+      let menuIcon = document.querySelector("#menu-icon");
+      let navbar = document.querySelector(".navbar");
+
+      menuIcon.onclick = () => {
+        menuIcon.classList.toggle("bx-x");
+        navbar.classList.toggle("active");
+      };
+
+      // sticky navbar
+      let header = document.querySelector("header");
+
+      header.classList.toggle("sticky", window.scrollY > 100);
+
+      // remove toggle icon and navbar when clock navbar link (scroll)
+      menuIcon.classList.remove("bx-x");
+      navbar.classList.remove("active");
+    </script>
+  </body>
+</html>

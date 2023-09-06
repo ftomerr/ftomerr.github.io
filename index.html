@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Droft Web - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  </head>
+  <body>
+    
+    <header class="header bg-blur">
+      <a href="index.html" class="Logo"
+        ><img src="img/logo.png" class="Logo" alt=""
+      /></a>
+
+      <nav class="navbar">
+        <a href="index.html" style="--i: 1" class="active">Home</a>
+        <a href="about.html" style="--i: 2">About</a>
+        <a href="projects.html" style="--i: 3">Projects</a>
+        <a href="contact.html" style="--i: 4">Contact</a>
+
+      </nav>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Faruk Tepe</h1>
+        <h3>And I'm a <span id="multiple-text"></span></h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          sit neque quos harum, eveniet nam rem debitis nesciunt! Nihil
+          laudantium officiis quas molestiae id magnam inventore assumenda ea a
+          voluptatem!
+        </p>
+        <div class="social-media">
+          <a href="#" style="--i: 7"><i class="bx bxl-youtube"></i></a>
+          <a href="#" style="--i: 8"><i class="bx bxl-instagram-alt"></i></a>
+          <a href="#" style="--i: 9"><i class="bx bxl-twitter"></i></a>
+          <a href="#" style="--i: 10"><i class="bx bxl-github"></i></a>
+        </div>
+        <a href="" class="btn">Download CV</a>
+      </div>
+
+      <div class="home-img">
+        <img src="img/home.jpg" alt="" />
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // toggle icon na
+      let menuIcon = document.querySelector("#menu-icon");
+      let navbar = document.querySelector(".navbar");
+
+      menuIcon.onclick = () => {
+        menuIcon.classList.toggle("bx-x");
+        navbar.classList.toggle("active");
+      };
+
+      // multiple-text
+
+      var typed = new Typed("#multiple-text", {
+        strings: ["Frontend Developer", "High School Student"],
+        typeSpeed: 120, // Yazma hızı (ms cinsinden)
+        backSpeed: 25, // Silme hızı (ms cinsinden)
+        backDelay: 1500, // Silindikten sonra bekleme süresi (ms cinsinden)
+        loop: true,
+      });
+
+      // sticky navbar
+      let header = document.querySelector("header");
+
+      header.classList.toggle("sticky", window.scrollY > 100);
+
+      // remove toggle icon and navbar when clock navbar link (scroll)
+      menuIcon.classList.remove("bx-x");
+      navbar.classList.remove("active");
+    </script>
+  </body>
+</html>

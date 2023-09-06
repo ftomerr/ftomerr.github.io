@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Droft Web - Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+   
+    <!-- navbar -->
+    <header class="header bg-blur">
+        <a href="index.html" class="Logo"
+          ><img src="img/logo.png" class="Logo" alt=""/></a>
+  
+        <nav class="navbar">
+          <a href="index.html" style="--i: 1">Home</a>
+          <a href="about.html" style="--i: 2">About</a>
+          <a href="projects.html" style="--i: 3">Projects</a>
+          <a href="contact.html" style="--i: 4"  class="active">Contact</a>
+
+        </nav>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+        
+    </header>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me!</span></h2>
+      <div class="border-bottom"></div>
+
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name">
+          <input type="email" placeholder="Email Adress">
+        </div>
+
+        <div class="input-box">
+          <input type="number" placeholder="Mobile Number">
+          <input type="text" placeholder="Email Subject">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form>
+    </section>
+
+    <section id="contact-b">
+      <div class="container">
+        <div class="contact-info">
+          <div>
+            <i class="fas fa-envelope fa-5x"></i>
+            <h3>Email</h3>
+            <p>droftbusiness@gmail.com</p>
+          </div>
+          <div>
+            <i class="fas fa-phone fa-5x"></i>
+            <h3>Phone</h3>
+            <p>0 (553) 960 68 05</p>
+          </div>
+          <div>
+            <i class="fas fa-address-card fa-5x"></i>
+            <h3>Adress</h3>
+            <p>İstanbul, Türkiye</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      
+
+    
+
+
+
+
+
+
+
+      
+
+    <footer id="footer-main">
+        <div class="footer-content container">
+          <p>Copyright &copy; 2023 by Droft | All Rights Deserved.</p>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="../node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <script>
+        // toggle icon na
+      let menuIcon = document.querySelector("#menu-icon");
+      let navbar = document.querySelector(".navbar");
+
+      menuIcon.onclick = () => {
+        menuIcon.classList.toggle("bx-x");
+        navbar.classList.toggle("active");
+      };
+
+      // sticky navbar
+      let header = document.querySelector("header");
+
+      header.classList.toggle("sticky", window.scrollY > 100);
+
+      // remove toggle icon and navbar when clock navbar link (scroll)
+      menuIcon.classList.remove("bx-x");
+      navbar.classList.remove("active");
+    </script>
+  </body>
+</html>

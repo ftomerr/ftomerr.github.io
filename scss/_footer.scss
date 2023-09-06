@@ -1,0 +1,20 @@
+#footer-main {
+  background: #070707;
+  color: #fff;
+  height: 5rem;
+  isolation: isolate;
+
+  .container {
+    max-width: $max-width;
+    margin: auto;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 5rem;
+    font-size: 15px;
+  }
+}
